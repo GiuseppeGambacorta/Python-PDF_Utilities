@@ -25,9 +25,9 @@ out_file = PyPDF2.PdfWriter()
 pages_to_delete = []
 previuspage = in_file.pages[0]
 previuos_page_text = extract_text(previuspage)
-pages = in_file.pages[1:]
 
-for page in pages:
+
+for page in in_file.pages[1:]:
     page_text = extract_text(page)
     if page_text.startswith(previuos_page_text):
         pages_to_delete.append(previuspage)
