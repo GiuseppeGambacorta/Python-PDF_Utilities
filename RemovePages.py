@@ -1,5 +1,5 @@
 import PyPDF2
-import re, sys
+import sys
 
 
 
