@@ -11,9 +11,9 @@ if length_of_input_args <=1:
 folder_path = sys.argv[1]
 files = os.listdir(folder_path)
 pdf_files = [file for file in files if file.endswith('.pdf')]
-pdf_files = [os.path.join(folder_path, file) for file in pdf_files]
+pdf_files_with_complete_path = [os.path.join(folder_path, file) for file in pdf_files]
 
-pdf_files.sort(key=os.path.getmtime)
+pdf_files_with_complete_path.sort(key=os.path.getmtime)
 
 out_file = PyPDF2.PdfWriter()
 for file in pdf_files:
